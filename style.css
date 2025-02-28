@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+    --font-family: "Work Sans", sans-serif;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--light-pink);
+}
+
+img, video, iframe {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+.hero {
+    height: 35vh;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+}
+
+.content {
+    background-color: white;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 8px 6px gray;
+    transition: all ease 0.5s;
+}
+
+.faq-item h2 {
+    font-size: 1.3rem;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.question-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    color: var(--grayish-purple);
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.answer.show {
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .faq-item h2 {
+        font-size: 1rem;
+    }
+
+    .answer {
+        font-size: 0.9rem;
+    }
+}
